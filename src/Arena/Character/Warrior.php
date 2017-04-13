@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: apelletier
- * Date: 13/04/17
- * Time: 10:07
- */
 
 namespace Arena\Character;
-
 
 class Warrior extends Character
 {
@@ -21,5 +14,4 @@ class Warrior extends Character
     {
         $character->hit(10);
     }
-
 }

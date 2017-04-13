@@ -2,10 +2,8 @@
 
 namespace Arena\Character;
 
-
 abstract class Character
 {
-
     protected $healthPoints;
     protected $name;
 
@@ -25,9 +23,8 @@ abstract class Character
         return $this->name;
     }
 
-    public function getHealtPoint()
+    public function getHealthPoint()
     {
         return $this->healthPoints;
     }
-
 }

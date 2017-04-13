@@ -2,7 +2,6 @@
 
 namespace Arena\Character;
 
-
 class Mage extends Character
 {
     public function __construct()
@@ -15,5 +14,4 @@ class Mage extends Character
     {
         $character->hit(5);
     }
-
 }
