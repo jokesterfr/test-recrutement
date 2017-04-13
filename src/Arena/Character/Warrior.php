@@ -6,7 +6,7 @@ class Warrior extends Character
 {
     public function __construct()
     {
-        $this->healthPoints = 20;
+        $this->healthPoints = 100;
         $this->name = 'Warrior';
     }
 

@@ -10,7 +10,7 @@ class Mage extends Character
 
     public function __construct()
     {
-        $this->healthPoints = 100;
+        $this->healthPoints = 80;
         $this->name = 'Mage';
     }
 
@@ -29,6 +29,6 @@ class Mage extends Character
 
     public function superAttack(Character $character)
     {
-        $character->hit(15);
+        $character->hit(35);
     }
 }
