@@ -4,29 +4,30 @@ namespace Arena\Character;
 
 class Mage extends Character
 {
-    private $attackNumber = 0;
+    private static $attackNumber = 0;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->healthPoints = 80;
         $this->name = 'Mage';
     }
 
-    public function attack(Character $character)
+    public function attack($character)
     {
-        $this->attackNumber++;
+        if ($character instanceof Character)
+         {
+            self::$attackNumber++;
 
-        if ($this->attackNumber % 3 === 0) {
-            echo "{$this->name} start a super attack!!!\n";
-            $this->superAttack($character);
-        } else {
-            parent::attack($character);
-            $character->hit(5);
+            if (self::$attackNumber == 3)
+            {
+                self::$attackNumber = 0;
+                echo "{$this->name} start a super attack!!!\n";
+                $character->hit(35);
+            }
+            else
+            {
+                echo "{$this->name} attack {$character->name}!\n";
+                $character->hit(5);
+            }
         }
-    }
-
-    public function superAttack(Character $character)
-    {
-        $character->hit(35);
     }
 }

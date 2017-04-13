@@ -7,18 +7,20 @@ abstract class Character
     protected $healthPoints;
     protected $name;
 
-    public function attack(Character $character) {
-        echo "{$this->name} attack {$character->name}!\n";
-    }
+    abstract public function attack($character);
 
     public function hit($points) {
-        $this->healthPoints -= $points;
-        echo "{$this->name} lose {$points} health points. {$this->healthPoints} remaining.\n";
+        $this->healthPoints -= $points; echo "{$this->name} lose {$points} health points. {$this->healthPoints} remaining.\n";
     }
 
     public function isDead()
     {
-        return $this->healthPoints <= 0;
+        if ($this->healthPoints == 0)
+            $isDead = true;
+        else
+            $isDead = false;
+
+        return $isDead;
     }
 
     public function getName()

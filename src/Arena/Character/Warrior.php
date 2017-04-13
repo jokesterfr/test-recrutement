@@ -4,15 +4,16 @@ namespace Arena\Character;
 
 class Warrior extends Character
 {
-    public function __construct()
-    {
+    public function __construct()  {
         $this->healthPoints = 100;
-        $this->name = 'Warrior';
+        $this->name  =  'Warrior';
     }
 
-    public function attack(Character $character)
+    public function attack($character)
     {
-        parent::attack($character);
-        $character->hit(10);
+        if ($character instanceof Character) {
+            echo "{$this->name} attack {$character->name}!\n";
+            $character->hit(10);
+        }
     }
 }
