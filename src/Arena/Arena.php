@@ -4,17 +4,15 @@ namespace Arena;
 
 use Arena\Character\Character;
 
-
 class Arena
 {
-    /**
-     * @var Character
-     */
+    /** @var Character */
     private $characterOne;
-    /**
-     * @var Character
-     */
+
+    /** @var Character */
     private $characterTwo;
+
+    private $roundNumber = 0;
 
     /**
      * Arena constructor.
@@ -27,7 +25,8 @@ class Arena
         $this->characterTwo = $characterTwo;
     }
 
-    function fight(){
+    function fight()
+    {
         while($this->noDead()) {
             $this->nextRound();
         }
@@ -39,14 +38,16 @@ class Arena
     }
 
     function nextRound() {
-        $this->characterOne->attack($this->characterTwo);
-        $this->characterTwo->attack($this->characterOne);
-        echo "{$this->characterOne->getHealtPoint()} {$this->characterTwo->getHealtPoint()} \n";
-
+        $this->roundNumber++;
+        if ($this->roundNumber % 2) {
+            $this->characterOne->attack($this->characterTwo);
+        } else {
+            $this->characterTwo->attack($this->characterOne);
+        }
     }
 
     function result() {
         $winner = $this->characterOne->isDead() ? $this->characterTwo->getName() : $this->characterOne->getName();
-        echo $winner;
+        echo "{$winner} won the battle!!\n";
     }
 }
