@@ -12,6 +12,8 @@ class Arena
     /** @var Character */
     private $characterTwo;
 
+    private $roundNumber = 0;
+
     /**
      * Arena constructor.
      * @param Character $characterOne
@@ -36,8 +38,12 @@ class Arena
     }
 
     function nextRound() {
-        $this->characterOne->attack($this->characterTwo);
-        $this->characterTwo->attack($this->characterOne);
+        $this->roundNumber++;
+        if ($this->roundNumber % 2) {
+            $this->characterOne->attack($this->characterTwo);
+        } else {
+            $this->characterTwo->attack($this->characterOne);
+        }
         echo "{$this->characterOne->getHealthPoint()} {$this->characterTwo->getHealthPoint()}\n";
     }
 
