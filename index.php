@@ -1,7 +1,7 @@
 <?php
 use Arena\Arena,
-    Arena\Character\Mage,
-    Arena\Character\Warrior;
+    Arena\Mage,
+    Arena\Warrior;
 
 require __DIR__.'/vendor/autoload.php';
 

@@ -2,7 +2,7 @@
 
 namespace Arena;
 
-use Arena\Character\Character;
+use Arena\Character;
 
 class Arena
 {

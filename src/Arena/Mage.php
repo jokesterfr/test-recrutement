@@ -1,6 +1,6 @@
 <?php
 
-namespace Arena\Character;
+namespace Arena;
 
 class Mage extends Character
 {
