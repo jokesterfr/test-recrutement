@@ -4,8 +4,6 @@ namespace Arena\Character;
 
 class Mage extends Character
 {
-    const SUPER_ATTACK_DELAY = 3;
-
     private $attackNumber = 0;
 
     public function __construct()
@@ -18,7 +16,7 @@ class Mage extends Character
     {
         $this->attackNumber++;
 
-        if ($this->attackNumber % self::SUPER_ATTACK_DELAY === 0) {
+        if ($this->attackNumber % 3 === 0) {
             echo "{$this->name} start a super attack!!!\n";
             $this->superAttack($character);
         } else {
