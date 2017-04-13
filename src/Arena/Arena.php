@@ -44,11 +44,10 @@ class Arena
         } else {
             $this->characterTwo->attack($this->characterOne);
         }
-        echo "{$this->characterOne->getHealthPoint()} {$this->characterTwo->getHealthPoint()}\n";
     }
 
     function result() {
         $winner = $this->characterOne->isDead() ? $this->characterTwo->getName() : $this->characterOne->getName();
-        echo $winner;
+        echo "{$winner} won the battle!!\n";
     }
 }

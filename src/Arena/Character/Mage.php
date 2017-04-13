@@ -12,6 +12,7 @@ class Mage extends Character
 
     public function attack(Character $character)
     {
+        parent::attack($character);
         $character->hit(5);
     }
 }
