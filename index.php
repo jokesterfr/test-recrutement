@@ -12,7 +12,15 @@ $arena = new Arena(
 );
 
 
-$arena->fight();
+$arena->fight(0);
 
+
+
+$arena = new Arena(
+    $characterOne, $characterTwo
+);
+
+
+$arena->fight("1");
 
 
