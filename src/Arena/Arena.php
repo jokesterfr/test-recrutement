@@ -8,40 +8,56 @@ final class Arena
     private $characterTwo;
     private $roundNumber = 0;
 
+    const STANDARD_MODE_FIGHT = 0;
+    const RANDOM_MODE_FIGHT = 1;
+
     public function __construct(Character $characterOne, Character $characterTwo)
     {
         $this->characterOne = $characterOne;
         $this->characterTwo = $characterTwo;
     }
 
-    public function fight($fightMode)
+    function displayFightMode(int $fightMode)
     {
-        echo "Fight Mode $fightMode\n";
+        echo PHP_EOL . "Fight mode $fightMode" . PHP_EOL;
+    }
+
+    function standardFight()
+    {
+        return $this->fight(self::STANDARD_MODE_FIGHT);
+    }
+
+    function randomFight()
+    {
+        return $this->fight(self::RANDOM_MODE_FIGHT);
+    }
+
+    function fight(int $fightMode)
+    {
+        $this->displayFightMode($fightMode);
 
         for ($i = 0; $i < 10000; $i++) {
             $this->roundNumber++;
-            if ($fightMode === '1') {
+            if($fightMode === self::STANDARD_MODE_FIGHT) {
                 if ($this->roundNumber % 2) {
                     $this->characterOne->attack($this->characterTwo);
-                } else {
-                    $this->characterTwo->attack($this->characterOne);
-                }
+                } else $this->characterTwo->attack($this->characterOne);
             } else {
                 $defender = $this->characterTwo;
 
                 $attacker = $this->playRockPaperScissor();
-                if ($defender === $attacker) {
+                if($defender === $attacker) {
                     $defender = $this->characterOne;
                 }
                 $attacker->attack($defender);
             }
             if ($this->characterOne->isDead()) {
                 echo "{$this->characterTwo->getName()} won the battle!!\n";
-                exit;
+                break;
             } else {
                 if ($this->characterTwo->isDead()) {
                     echo "{$this->characterOne->getName()} won the battle!!\n";
-                    exit;
+                    break;
                 }
             }
         }
@@ -80,5 +96,6 @@ final class Arena
         }
 
         return $this->characterTwo;
+
     }
 }

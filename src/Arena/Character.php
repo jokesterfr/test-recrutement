@@ -9,23 +9,26 @@ abstract class Character
 
     abstract public function attack(Character $character);
 
-    public function hit(int $points)
+    public function hit($points)
     {
-        $this->healthPoints -= $points;
+        $healthPoints = $this->healthPoints;
+        $healthPoints -= $points;
+        $this->healthPoints = max(0, $healthPoints);
+
         echo "{$this->name} lose {$points} health points. {$this->healthPoints} remaining.\n";
     }
 
-    public function isDead() : bool
+    public function isDead()
     {
         return 0 === $this->healthPoints;
     }
 
-    public function getName() : string
+    public function getName()
     {
         return $this->name;
     }
 
-    public function getHealthPoint() : int
+    public function getHealthPoint()
     {
         return $this->healthPoints;
     }

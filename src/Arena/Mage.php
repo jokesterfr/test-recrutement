@@ -2,7 +2,7 @@
 
 namespace Arena;
 
-class Mage extends Character
+final class Mage extends Character
 {
     private static $attackNumber = 0;
 

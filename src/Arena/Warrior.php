@@ -2,7 +2,7 @@
 
 namespace Arena;
 
-class Warrior extends Character
+final class Warrior extends Character
 {
     public function __construct()
     {
