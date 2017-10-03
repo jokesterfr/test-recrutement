@@ -11,29 +11,16 @@ final class Arena
     const STANDARD_MODE_FIGHT = 0;
     const RANDOM_MODE_FIGHT = 1;
 
-    public function __construct(Character $characterOne, Character $characterTwo)
-    {
-        $this->characterOne = $characterOne;
-        $this->characterTwo = $characterTwo;
-    }
-
-    function displayFightMode(int $fightMode)
+    private function displayFightMode(int $fightMode)
     {
         echo PHP_EOL . "Fight mode $fightMode" . PHP_EOL;
     }
 
-    function standardFight()
+    public function fight(int $fightMode, Character $characterOne, Character $characterTwo)
     {
-        return $this->fight(self::STANDARD_MODE_FIGHT);
-    }
+        $this->characterOne = $characterOne;
+        $this->characterTwo = $characterTwo;
 
-    function randomFight()
-    {
-        return $this->fight(self::RANDOM_MODE_FIGHT);
-    }
-
-    function fight(int $fightMode)
-    {
         $this->displayFightMode($fightMode);
 
         for ($i = 0; $i < 10000; $i++) {
@@ -96,6 +83,5 @@ final class Arena
         }
 
         return $this->characterTwo;
-
     }
 }
