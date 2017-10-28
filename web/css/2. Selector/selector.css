@@ -1,0 +1,40 @@
+section {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.dot {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	list-style: none;
+	background-color: grey;
+	float: left;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: xx-large;
+	text-align: center;
+}
+
+/* Exo1 : colorier le 6ème élément */
+
+
+/* Exo2 : colorier les pairs */
+
+
+/* Exo3 : colorier l'avant dernier element */
+
+
+/* Exo4 : colorier tous les 3 éléments */
+
+
+/* Exo5 : Colorier les pastilles n°1 qui sont seules */
+
+
+/* Exo6 : Colorier le numéro dont le lien href est /page4 */
+
+
+/* Exo7 : Colorier toutes les pastilles sauf les numéros 1 */
+
+
+/* Exo8 : Colorier la pastille 1 en jaune, la 2 et 3 en rouge et les 4 5 et 6 en vert */
