@@ -1,0 +1,13 @@
+{
+  "name": "arena",
+  "private": true,
+  "engines": {
+    "node": "9.11.1"
+  },
+  "scripts": {
+    "start": "node cli.js serve"
+  },
+  "dependencies": {
+    "rx": "^4.1.0"
+  }
+}
