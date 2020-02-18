@@ -2,8 +2,8 @@
 
 ## Game Modes
 
-Classic battle mode on Arena
-Full random mode on Random Arena
+- Classic battle mode on Arena
+- Full random mode on Random Arena
 
 ## Exercices
 
