@@ -13,4 +13,3 @@ Here's what it should look like:
 
 ![Example](example.png)
 
-PS: Don't use tables :)
