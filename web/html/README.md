@@ -1,5 +1,7 @@
 # HTML Test
 
+## The use of css variables is recommended !
+
 Write the html/css code of a page with:
 
 1. Fluid width
@@ -13,4 +15,5 @@ Write the html/css code of a page with:
 Here's what it should look like:
 
 ![Example](example.png)
+
 
