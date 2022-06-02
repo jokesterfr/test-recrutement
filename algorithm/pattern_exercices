@@ -1,0 +1,19 @@
+We have created an MVP for a Room-Booking application. The code for the API is written using NodeJs - Express, with the front-end created using standard Php + Twig and javascript (vanilla). There are not unit nor functional tests.
+We store users, room-availability, booking-orders and booking-confirmations in a database (MySQL). The project is hosted in a simple dedicated server. 
+
+The users can create an account / login and can use our application to list available hotels for the given dates and book them. 
+When a user book a room, the front-end (in javascript) sends a request to the PHP web-server.
+It will confirm the availability of the room using an external API and if it is ok, it will remove the hotel availability from the database.
+Every night at 00h00, there is a Cron Job that call the PHP webserver to update the room availabilities using that external API.
+The developers have observed that the most critical problem in performance is the amount of "availability" requests and at night, the execution of the Cron.
+
+We have the following problems:
+- The current code makes it difficult to add automated functional tests.
+- The single server has too much traffic and that overload implies that sometimes the room-availability interface does not work well.
+- The application is difficult to debug and it is difficult to know which actions where done by the final user and by our internal processes and in which order
+- We have detected weird behaviors like not connected users being able to get information about rooms availability, but we are not able to reproduce the bug case.
+The developers have tested the urls with Postman and they have not observed any problem, but there is a Symfony log indicating the case.
+- It is difficult to find new developers for the team as our tech stack is too old, but it is also difficult to create a new version as it would take us too much time and we do not have the resources.
+
+You are the architecture owner of the application.
+You have to explain the causes of each problem, then the design patterns that you may use to solve each one, and the good practices to avoid it in the future.
