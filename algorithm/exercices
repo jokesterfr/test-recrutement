@@ -9,25 +9,25 @@ Write a function to check if a number is even or odd.
 EXO 02
 Write a function to check if a number is only divisible by itself and 1
 
-EXO 02 solution
+EXO 03
 Write a function to solve this problem :
 The current year has begun N hours ago.
 To what number the clock points for the hour ?
 
-EXO 03
+EXO 04
 Write a function to find the word count in a string
 
-EXO 04
+EXO 05
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 
-EXO 05
+EXO 06
 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0
 
-EXO 06
+EXO 07
 Write a function to generate the nth Fibonacci number
 
-EXO 07
+EXO 08
 Implements unix cal command that display the calendar of current month
      Avril 2017
 di lu ma me je ve sa
