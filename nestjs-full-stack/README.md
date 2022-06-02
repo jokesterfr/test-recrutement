@@ -10,5 +10,5 @@ To start developing run:
 
 ## Exercises
 * Debug and refactor this code to make it work
-* Create a new screen before the fight start where you can select the type of character for the player 1
+* Create a new screen where you can select the type of character for the player 1 before the fight
 * The kind of character for the player 2 must be randomized
