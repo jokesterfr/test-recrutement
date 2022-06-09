@@ -11,6 +11,7 @@ Critical Problems:
 So the (single) server has too much traffic and that overload implies that sometimes the room-availability interface does not work well.
 - Sometimes the API is not available during the execution of the Cron job.
 - We have detected weird behaviors like not connected users being able to get information about rooms availability, but we are not able to reproduce the bug case.
+We have tested with curl (Postman), created unit tests and we have not reproduced it.
 
 Futhermore:
 - The current code makes it difficult to add automated functional tests.
