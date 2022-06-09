@@ -1,7 +1,7 @@
 We have created an MVP for a Room-Booking application. The code for the API is written using NodeJs - Express, with the front-end created using standard Php + Twig and javascript (vanilla). There are not unit nor functional tests.
 We store users, room-availability, booking-orders and booking-confirmations in a database (MySQL). The project is hosted in a simple dedicated server. 
 
-The users can create an account / login and can use our application to list available hotels for the given dates and book them. 
+The users can create an account / login and can use our application to list available rooms for the given dates and book them. 
 When a user book a room, the front-end (in javascript) sends a request to the PHP web-server.
 It will confirm the availability of the room using an external API and if it is ok, it will remove the rooms availability from the database.
 Every night at 00h00, there is a Cron Job that call the PHP webserver to update the room availabilities using that external API.
